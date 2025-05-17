@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "name": "sample-project",
+      "description": "Placeholder project description",
+      "repo": "https://example.com/repo.git"
+    }
+  ],
+  "agents": [
+    {
+      "name": "example-agent",
+      "url": "https://agent.example.com",
+      "token": "PLACEHOLDER_TOKEN"
+    }
+  ]
+}

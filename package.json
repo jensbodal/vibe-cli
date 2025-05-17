@@ -10,7 +10,7 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@openai/codex": "github:openai/codex",
-    "nx": "latest"
+    "@openai/codex": "0.1.0",
+    "nx": "18.0.0"
   }
 }

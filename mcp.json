@@ -2,6 +2,15 @@
   "name": "vibe-cli",
   "version": "0.1.0",
   "description": "MCP configuration for vibe-cli",
-  "projects": [],
-  "settings": {}
+  "projects": [
+    {
+      "name": "example-agent",
+      "entry": "agents/example/index.ts",
+      "description": "Sample agent placeholder"
+    }
+  ],
+  "settings": {
+    "defaultModel": "gpt-3.5-turbo",
+    "maxContextSize": 8192
+  }
 }

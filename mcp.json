@@ -1,16 +1,7 @@
 {
-  "projects": [
-    {
-      "name": "sample-project",
-      "description": "Placeholder project description",
-      "repo": "https://example.com/repo.git"
-    }
-  ],
-  "agents": [
-    {
-      "name": "example-agent",
-      "url": "https://agent.example.com",
-      "token": "PLACEHOLDER_TOKEN"
-    }
-  ]
+  "name": "vibe-cli",
+  "version": "0.1.0",
+  "description": "MCP configuration for vibe-cli",
+  "projects": [],
+  "settings": {}
 }

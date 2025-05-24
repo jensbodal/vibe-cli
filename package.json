@@ -4,13 +4,22 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "nx": "18.0.0"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "@openai/codex": "0.1.0",
-    "nx": "18.0.0"
+    "@openai/codex": "0.1.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "scripts": {
+    "nx": "nx",
+    "start": "bun run index.ts",
+    "test": "bun test --coverage"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "name": "task-cli",
+  "root": "libs/task-cli",
+  "sourceRoot": "libs/task-cli/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "outputPath": "dist/libs/task-cli",
+        "main": "libs/task-cli/src/index.ts",
+        "tsConfig": "libs/task-cli/tsconfig.lib.json"
+      }
+    }
+  }
+}

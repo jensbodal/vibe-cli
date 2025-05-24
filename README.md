@@ -63,3 +63,29 @@ cd vendor/codex
 # Example usage (replace with actual command)
 ./codex --help
 ```
+
+## Nx Workspace
+
+This repo is configured as an Nx monorepo. Apps live in `apps/` and libraries in `libs/`.
+Run Nx commands with:
+
+```bash
+pnpm nx <command>
+```
+
+## Running tests
+
+Execute the unit tests with Bun:
+
+```bash
+bun test --coverage
+```
+
+### task-cli
+
+The `task-cli` library provides a simple RSS-based news gatherer.
+Run it with:
+
+```bash
+bun run libs/task-cli/src/index.ts <rss-feed-url> [rss-feed-url...]
+```

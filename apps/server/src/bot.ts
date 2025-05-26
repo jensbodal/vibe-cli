@@ -1,5 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+import {fileURLToPath} from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import {Server} from 'socket.io';
 import {Ollama} from 'ollama';
 import {Player} from './types';

@@ -3,5 +3,5 @@ agents during development. Files here are optional and may be ignored
 by users not working with the agent tooling.
 
 Open tasks are tracked in `.vibe/tasks.md` with additional details stored
-under the `./tasks` folder.
+under `.vibe/tasks/<task-name>`.
 

@@ -67,11 +67,17 @@ cd vendor/codex
 ## Nx Workspace
 
 This repo is configured as an Nx monorepo. Apps live in `apps/` and libraries in `libs/`.
-Run Nx commands with:
+Run Nx commands with the provided npm script:
 
 ```bash
-pnpm nx <command>
+bun run nx <command>
 ```
+
+`pnpm nx <command>` works as well if you prefer `pnpm`.
+
+## Project Catalog
+
+The `.vibe/projects.md` file lists all Nx projects. Update it whenever you add or remove a project.
 
 ## Running tests
 

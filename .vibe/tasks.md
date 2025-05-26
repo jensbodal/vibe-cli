@@ -1,6 +1,7 @@
 # Task List
 
-Keep this list up to date with open development tasks.
+Keep this list up to date with open development tasks. Each task has a
+corresponding folder under `./tasks` with additional documentation.
 
 - [ ] Improve test coverage for `apps/server`
 - [ ] Document deployment steps for the Bot-or-Not game

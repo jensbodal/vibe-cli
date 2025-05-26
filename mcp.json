@@ -7,6 +7,21 @@
       "name": "example-agent",
       "entry": "agents/example/index.ts",
       "description": "Sample agent placeholder"
+    },
+    {
+      "name": "@bot-or-not/server",
+      "entry": "apps/server/src/index.ts",
+      "description": "Node server for Bot-or-Not game"
+    },
+    {
+      "name": "@bot-or-not/client",
+      "entry": "apps/client/src/main.tsx",
+      "description": "React client for Bot-or-Not game"
+    },
+    {
+      "name": "task-cli",
+      "entry": "libs/task-cli/src/index.ts",
+      "description": "RSS summarizer CLI"
     }
   ],
   "settings": {

@@ -75,7 +75,7 @@ pnpm nx <command>
 
 ## Running tests
 
-Execute the unit tests with Bun:
+Execute the unit tests with Bun. The suite now includes checks for the Bot-or-Not server logic such as message masking and bot initialization:
 
 ```bash
 bun test --coverage

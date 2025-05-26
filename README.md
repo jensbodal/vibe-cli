@@ -89,3 +89,23 @@ Run it with:
 ```bash
 bun run libs/task-cli/src/index.ts <rss-feed-url> [rss-feed-url...]
 ```
+
+## Bot-or-Not Game
+
+This repo now includes an example Nx application called **bot-or-not** with a Node server and a React client. The game supports up to eleven human players and a twelfth bot controlled by a local LLM.
+
+### Prerequisites
+- Node 18+
+- `pnpm` installed globally
+- An LLM server such as [Ollama](https://github.com/jmorganca/ollama) or [LocalAI](https://github.com/go-skynet/LocalAI)
+
+Set one of `OLLAMA_BASE_URL` or `OPENAI_BASE_URL` and `OPENAI_API_KEY` as needed.
+
+### Running locally
+
+```bash
+pnpm --filter @bot-or-not/server dev
+pnpm --filter @bot-or-not/client dev
+```
+
+Open the client in the browser and follow the prompts to join the chat room.

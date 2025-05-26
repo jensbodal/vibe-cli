@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "root": "apps/server",
+  "sourceRoot": "apps/server/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "outputPath": "dist/apps/server",
+        "main": "apps/server/src/index.ts",
+        "tsConfig": "apps/server/tsconfig.app.json"
+      }
+    },
+    "start": {
+      "executor": "@nx/node:node",
+      "options": {
+        "buildTarget": "server:build"
+      }
+    },
+    "dev": {
+      "executor": "@nx/node:node",
+      "options": {
+        "buildTarget": "server:build",
+        "watch": true
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/nx", 
-  "npmScope": "vibe", 
+  "npmScope": "bot-or-not",
   "affected": {
     "defaultBase": "main"
   },

@@ -1,3 +1,5 @@
+import {pathToFileURL} from 'url';
+
 export interface NewsArticle {
   title: string;
   link: string;
@@ -62,7 +64,8 @@ export async function cli(args: string[] = process.argv.slice(2)) {
   await run(args);
 }
 
-if (require.main === module) {
+const isMain = import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isMain) {
   cli().catch((err) => {
     console.error(err);
     process.exit(1);

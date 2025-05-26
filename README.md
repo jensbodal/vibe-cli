@@ -1,9 +1,8 @@
 # vibe-cli
 
-This is a minimal prototype for experimenting with agents that use the
-Model Context Protocol (MCP). The project uses [Bun](https://bun.sh) for the
-runtime and includes placeholder dependencies for `@openai/codex` and `nx`.
-
+This repository hosts tools, examples, and notes on agentic development with
+the Model Context Protocol (MCP). It uses [Bun](https://bun.sh) for the runtime
+and includes placeholder dependencies for `@openai/codex` and Nx.
 ## Installing dependencies
 
 The environment may not have network access, so `bun install` can fail when
@@ -22,10 +21,10 @@ bun install
 bun run index.ts
 ```
 
-This project was created using `bun init` in bun v1.2.10.
-`mcp.json` in the repo root holds MCP-related configuration, while the `.vibe`
-directory is reserved for project metadata used by agents.
 
+This project was created using `bun init` in bun v1.2.10.
+The repo follows Nx's layout with applications in `apps/` and libraries in `libs/`.
+`mcp.json` contains MCP configuration and the `.vibe` directory stores metadata used by agents.
 # Codex Setup
 
 This repository integrates [OpenAI Codex](https://github.com/openai/codex) using a helper script.
@@ -64,6 +63,13 @@ cd vendor/codex
 ./codex --help
 ```
 
+
+### Quick Codex checklist
+
+- Enable Codex access on your OpenAI account.
+- Link this repository through the Codex dashboard.
+- Run `scripts/setup_codex.sh` to clone Codex and install dependencies.
+- Review the security facts in the Codex docs before running commands.
 ## Nx Workspace
 
 This repo is configured as an Nx monorepo. Apps live in `apps/` and libraries in `libs/`.

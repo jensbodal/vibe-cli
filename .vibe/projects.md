@@ -1,0 +1,3 @@
+- apps/server
+- apps/client
+- libs/task-cli

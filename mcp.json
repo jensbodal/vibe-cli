@@ -1,12 +1,22 @@
 {
   "name": "vibe-cli",
   "version": "0.1.0",
-  "description": "MCP configuration for vibe-cli",
+  "description": "This repository aggregates agentic-development examples.",
   "projects": [
     {
-      "name": "example-agent",
-      "entry": "agents/example/index.ts",
-      "description": "Sample agent placeholder"
+      "name": "server",
+      "entry": "apps/server/src/index.ts",
+      "description": "Backend API for the bot-or-not game"
+    },
+    {
+      "name": "client",
+      "entry": "apps/client/src/main.tsx",
+      "description": "React client for the bot-or-not game"
+    },
+    {
+      "name": "task-cli",
+      "entry": "libs/task-cli/src/index.ts",
+      "description": "CLI for summarizing RSS feeds"
     }
   ],
   "settings": {

@@ -1,0 +1,3 @@
+- Remove obsolete example project
+- Add server, client and task-cli to mcp.json
+- Document projects and tasks lists in README

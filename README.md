@@ -1,7 +1,8 @@
 # vibe-cli
 
-This is a minimal prototype for experimenting with agents that use the
-Model Context Protocol (MCP). The project uses [Bun](https://bun.sh) for the
+This repository aggregates several agentic-development examples that use the
+Model Context Protocol (MCP). It provides a small Node/React game and a CLI
+library for news summarization. The project uses [Bun](https://bun.sh) for the
 runtime and includes placeholder dependencies for `@openai/codex` and `nx`.
 
 ## Installing dependencies
@@ -23,8 +24,9 @@ bun run index.ts
 ```
 
 This project was created using `bun init` in bun v1.2.10.
-`mcp.json` in the repo root holds MCP-related configuration, while the `.vibe`
-directory is reserved for project metadata used by agents.
+`mcp.json` in the repo root holds MCP-related configuration. The `.vibe`
+directory stores agent metadata and now contains `projects.md` and `tasks.md`
+that list available projects and recent agent tasks.
 
 # Codex Setup
 

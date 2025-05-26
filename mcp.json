@@ -4,11 +4,6 @@
   "description": "MCP configuration for vibe-cli",
   "projects": [
     {
-      "name": "example-agent",
-      "entry": "agents/example/index.ts",
-      "description": "Sample agent placeholder"
-    },
-    {
       "name": "bot-or-not-client",
       "entry": "apps/client",
       "description": "React front-end for the Bot-or-Not game"

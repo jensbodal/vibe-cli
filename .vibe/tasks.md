@@ -2,6 +2,7 @@
 
 Keep this list up to date with open development tasks.
 
-- [ ] Improve test coverage for `apps/server`
+- [ ] Install server test dependencies
+- [ ] Add server tests
+- [ ] Add TypeScript type packages
 - [ ] Document deployment steps for the Bot-or-Not game
-

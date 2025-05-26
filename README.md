@@ -24,7 +24,8 @@ bun run index.ts
 
 This project was created using `bun init` in bun v1.2.10.
 `mcp.json` in the repo root holds MCP-related configuration, while the `.vibe`
-directory is reserved for project metadata used by agents.
+directory is reserved for project metadata used by agents. See
+`.vibe/projects.md` for a catalog of apps, libraries, and outstanding tasks.
 
 # Codex Setup
 

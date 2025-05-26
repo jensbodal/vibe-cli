@@ -3,9 +3,12 @@ import http from 'http';
 import {Server} from 'socket.io';
 import fs from 'fs';
 import path from 'path';
+import {fileURLToPath} from 'url';
 import {maskMessage} from './mask';
 import {initBot} from './bot';
 import {Player} from './types';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const server = http.createServer(app);

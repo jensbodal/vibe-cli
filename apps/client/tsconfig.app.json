@@ -2,7 +2,8 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "../../dist/apps/client",
-    "rootDir": "src"
+    "rootDir": "src",
+    "lib": ["DOM", "ESNext"]
   },
   "include": ["src/**/*"],
   "exclude": []

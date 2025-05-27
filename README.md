@@ -24,15 +24,7 @@ bun run index.ts
 ```
 
 This project was created using `bun init` in bun v1.2.10.
-`mcp.json` in the repo root holds MCP-related configuration, while the `.vibe`
-directory is reserved for project metadata used by agents. An example agent lives
-in `agents/example` and simply prints a message when run.
-
-You can run it with:
-
-```bash
-bun run agents/example/index.ts
-```
+`mcp.json` in the repo root holds MCP-related configuration, while the `.vibe` directory is reserved for project metadata used by agents.
 
 All task documentation lives under `.vibe/tasks`.
 

@@ -26,7 +26,9 @@ bun run index.ts
 This project was created using `bun init` in bun v1.2.10.
 `mcp.json` in the repo root holds MCP-related configuration, while the `.vibe`
 directory is reserved for project metadata used by agents. An example agent lives
-in `agents/example` and simply prints a message when run.
+in `agents/example` and simply prints a message when run. The
+`GenerativeAIReporterAgent` under `agents/generative-ai-reporter-agent` ranks
+repositories and outputs a small report.
 
 You can run it with:
 

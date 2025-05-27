@@ -11,4 +11,5 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [x] Add TypeScript type packages
 - [x] Update README with agentic tools description
 - [x] Create example agent
+- [x] Remove duplicate bot system prompt
 

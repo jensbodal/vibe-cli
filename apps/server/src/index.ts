@@ -28,7 +28,7 @@ export async function createServer(
 
   app.patch('/prompt', (req: any, res: any) => {
     const body = typeof req.body === 'string' ? req.body : req.body.prompt;
-    const promptPath = path.join(__dirname, '../../prompts/bot_system.txt');
+    const promptPath = path.join(__dirname, '../../../prompts/bot_system.txt');
     fs.writeFileSync(promptPath, body);
     res.json({ok: true});
   });

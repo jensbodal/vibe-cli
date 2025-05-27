@@ -5,6 +5,9 @@ applications built around the Model Context Protocol (MCP). It uses
 [Bun](https://bun.sh) for the runtime and leverages [Nx](https://nx.dev) to
 manage the various apps and libraries.
 
+This repository expects **Node.js 18+** and **Bun v1.2.10** or newer to be
+installed.
+
 ## Installing dependencies
 
 The environment may not have network access, so `bun install` can fail when

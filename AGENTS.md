@@ -26,4 +26,5 @@ You can also use `pnpm nx <command>` if you prefer `pnpm`.
 * Update `README.md` and `mcp.json` if configuration or capabilities change.
 * Keep the project catalog `.vibe/projects.md` up to date when adding or removing Nx projects.
 * Ensure the `.vibe/tasks.md` file reflects the current outstanding tasks.
+* Store each task's documentation under `.vibe/tasks/<task-name>`.
 

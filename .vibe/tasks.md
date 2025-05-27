@@ -7,7 +7,7 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [x] Install server deps and tests
 - [x] Add main routes and socket tests
 - [ ] Document deployment steps for the Bot-or-Not game
-- [ ] Evaluate need for an `example-agent` in the future
+- [ ] Evaluate need for an `example-agent` in the future [(task)](tasks/evaluate-example-agent/task-evaluate-example-agent.md)
 - [x] Add TypeScript type packages
 - [x] Update README with agentic tools description
 - [x] Create example agent

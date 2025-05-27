@@ -6,7 +6,7 @@ import path from 'path';
 import {fileURLToPath} from 'url';
 import {maskMessage} from './mask';
 import {initBot} from './bot';
-import {Player} from './types';
+import type {Player} from './types';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -19,15 +19,15 @@ app.use(express.json());
 const players: Map<string, Player> = new Map();
 const personaList: string[] = [];
 
-app.patch('/prompt', (req, res) => {
+app.patch('/prompt', (req: any, res: any) => {
   const body = typeof req.body === 'string' ? req.body : req.body.prompt;
   const promptPath = path.join(__dirname, '../../prompts/bot_system.txt');
   fs.writeFileSync(promptPath, body);
   res.json({ok: true});
 });
 
-io.on('connection', (socket) => {
-  socket.on('join', ({name, persona}) => {
+io.on('connection', (socket: any) => {
+  socket.on('join', ({name, persona}: {name: string; persona: string}) => {
     const player: Player = {id: socket.id, name, persona};
     players.set(socket.id, player);
     personaList.push(persona);

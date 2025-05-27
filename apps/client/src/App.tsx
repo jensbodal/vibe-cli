@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
-import {io, Socket} from 'socket.io-client';
+import {io} from 'socket.io-client';
+import type {Socket} from 'socket.io-client';
 
 interface ChatMessage {
   id: string;
@@ -12,26 +13,26 @@ export default function App() {
   const [name, setName] = useState('');
   const [persona, setPersona] = useState('');
   const [joined, setJoined] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState([] as any[]);
   const [input, setInput] = useState('');
 
   useEffect(() => {
     socket = io();
     socket.on('broadcast', (msg: ChatMessage) => {
-      setMessages((m) => [...m, msg]);
+      setMessages((m: ChatMessage[]) => [...m, msg]);
     });
     socket.on('bot:message', (msg: ChatMessage) => {
-      setMessages((m) => [...m, msg]);
+      setMessages((m: ChatMessage[]) => [...m, msg]);
     });
     return () => { socket.disconnect(); };
   }, []);
 
-  const join = () => {
+  const join = (): void => {
     socket.emit('join', {name, persona});
     setJoined(true);
   };
 
-  const send = () => {
+  const send = (): void => {
     socket.emit('chat:message', input);
     setInput('');
   };
@@ -39,8 +40,8 @@ export default function App() {
   if (!joined) {
     return (
       <div className="p-4 space-y-2">
-        <input className="border" placeholder="name" value={name} onChange={e => setName(e.target.value)} />
-        <textarea className="border w-full" placeholder="persona" value={persona} onChange={e => setPersona(e.target.value)} />
+        <input className="border" placeholder="name" value={name} onChange={(e: any) => setName(e.target.value)} />
+        <textarea className="border w-full" placeholder="persona" value={persona} onChange={(e: any) => setPersona(e.target.value)} />
         <button className="bg-blue-500 text-white px-2" onClick={join}>Join</button>
       </div>
     );
@@ -49,11 +50,11 @@ export default function App() {
   return (
     <div className="p-4">
       <div className="h-80 overflow-y-scroll border mb-2 p-2">
-        {messages.map((m, i) => (
+        {messages.map((m: ChatMessage, i: number) => (
           <div key={i} className="mb-1"><b>{m.id}:</b> {m.message}</div>
         ))}
       </div>
-      <input className="border w-full" value={input} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key==='Enter' && send()} />
+      <input className="border w-full" value={input} onChange={(e: any) => setInput(e.target.value)} onKeyDown={(e: any) => e.key==='Enter' && send()} />
     </div>
   );
 }

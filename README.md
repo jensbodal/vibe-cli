@@ -28,6 +28,14 @@ This project was created using `bun init` in bun v1.2.10.
 directory is reserved for project metadata used by agents. An example agent lives
 in `agents/example` and simply prints a message when run.
 
+You can run it with:
+
+```bash
+bun run agents/example/index.ts
+```
+
+All task documentation lives under `.vibe/tasks`.
+
 # Codex Setup
 
 This repository integrates [OpenAI Codex](https://github.com/openai/codex) using a helper script.

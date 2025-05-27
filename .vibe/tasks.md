@@ -10,4 +10,5 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [ ] Evaluate need for an `example-agent` in the future
 - [x] Add TypeScript type packages
 - [x] Update README with agentic tools description
+- [x] Create example agent
 

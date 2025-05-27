@@ -1,8 +1,9 @@
 # vibe-cli
 
-This is a minimal prototype for experimenting with agents that use the
-Model Context Protocol (MCP). The project uses [Bun](https://bun.sh) for the
-runtime and includes placeholder dependencies for `@openai/codex` and `nx`.
+This repository collects a set of agentic development tools and example
+applications built around the Model Context Protocol (MCP). It uses
+[Bun](https://bun.sh) for the runtime and leverages [Nx](https://nx.dev) to
+manage the various apps and libraries.
 
 ## Installing dependencies
 
@@ -88,27 +89,31 @@ Execute the unit tests with Bun. The server tests live under
 bun test --coverage
 ```
 
+## Included tools and examples
+
 ### task-cli
 
-The `task-cli` library provides a simple RSS-based news gatherer.
+A small RSS-based news gatherer.
 Run it with:
 
 ```bash
 bun run libs/task-cli/src/index.ts <rss-feed-url> [rss-feed-url...]
 ```
 
-## Bot-or-Not Game
+### Bot-or-Not
 
-This repo now includes an example Nx application called **bot-or-not** with a Node server and a React client. The game supports up to eleven human players and a twelfth bot controlled by a local LLM.
+An example chat game split into a Node server and a React client. Up to eleven
+human players can compete against a twelfth bot driven by a local LLM.
 
-### Prerequisites
-- Node 18+
-- `pnpm` installed globally
-- An LLM server such as [Ollama](https://github.com/jmorganca/ollama) or [LocalAI](https://github.com/go-skynet/LocalAI)
+#### Prerequisites
+* Node 18+
+* `pnpm` installed globally
+* An LLM server such as [Ollama](https://github.com/jmorganca/ollama) or [LocalAI](https://github.com/go-skynet/LocalAI)
 
-Set one of `OLLAMA_BASE_URL` or `OPENAI_BASE_URL` and `OPENAI_API_KEY` as needed.
+Set one of `OLLAMA_BASE_URL` or `OPENAI_BASE_URL` and `OPENAI_API_KEY` as
+needed.
 
-### Running locally
+#### Running locally
 
 ```bash
 pnpm --filter @bot-or-not/server dev
@@ -116,3 +121,8 @@ pnpm --filter @bot-or-not/client dev
 ```
 
 Open the client in the browser and follow the prompts to join the chat room.
+
+### Scripts
+
+Utility scripts live under the `scripts/` directory. `setup_codex.sh` clones the
+OpenAI Codex repository and installs its dependencies.

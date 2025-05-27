@@ -25,8 +25,8 @@ test('fetchRss parses items', async () => {
   fetchMock = async () => makeResponse(rss);
   const items = await fetchRss('https://feed');
   expect(items.length).toBe(1);
-  expect(items[0].title).toBe('t1');
-  expect(items[0].link).toBe('https://a/1');
+  expect(items[0]!.title).toBe('t1');
+  expect(items[0]!.link).toBe('https://a/1');
 });
 
 test('fetchArticle returns text', async () => {

@@ -3,11 +3,10 @@ const baseUrl =
   process.env.OLLAMA_BASE_URL ||
   'http://localhost:11434';
 
-let client: {chat: (req: any) => Promise<{message: {content: string}}>} | null =
-  null;
+let client: any = null;
 
-async function getClient() {
-  if (client) return client;
+async function getClient(): Promise<any> {
+  if (client) return client!;
   const Ollama = (globalThis as any).__Ollama || (await import('ollama')).Ollama;
   client = new Ollama({baseUrl});
   return client;

@@ -13,10 +13,10 @@ export async function fetchRss(url: string): Promise<NewsArticle[]> {
   const res = await fetch(url);
   const text = await res.text();
   const items = Array.from(text.matchAll(/<item>([\s\S]*?)<\/item>/g));
-  return items.map((m) => {
+  return items.map((m: any) => {
     const content = m[1];
-    const title = /<title>(.*?)<\/title>/.exec(content)?.[1] ?? "";
-    const link = /<link>(.*?)<\/link>/.exec(content)?.[1] ?? "";
+    const title = (/<title>(.*?)<\/title>/.exec(content)?.[1] ?? "") as string;
+    const link = (/<link>(.*?)<\/link>/.exec(content)?.[1] ?? "") as string;
     return { title, link, summary: "" };
   });
 }

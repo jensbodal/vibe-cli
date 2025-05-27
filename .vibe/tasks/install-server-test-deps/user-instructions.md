@@ -1,0 +1,1 @@
+To set up the server tests, run `bun install` from the repository root to install all dependencies. Then execute `bun x tsc --noEmit -p apps/server/tsconfig.app.json` to verify type checking, and finally run `bun test`.

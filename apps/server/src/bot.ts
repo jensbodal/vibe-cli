@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import {Server} from 'socket.io';
 import {Ollama} from 'ollama';
-import {Player} from './types';
+import type {Player} from './types';
 
 const PROMPT_PATH = path.join(__dirname, '../../prompts/bot_system.txt');
 

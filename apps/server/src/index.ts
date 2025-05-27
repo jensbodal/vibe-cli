@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import {maskMessage} from './mask';
 import {initBot} from './bot';
-import {Player} from './types';
+import type {Player} from './types';
 
 const app = express();
 const server = http.createServer(app);

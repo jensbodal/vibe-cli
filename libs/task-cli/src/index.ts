@@ -11,6 +11,11 @@ export interface NewsArticle {
  */
 export async function fetchRss(url: string): Promise<NewsArticle[]> {
   const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(
+      `Failed to fetch RSS feed (${res.status} ${res.statusText})`
+    );
+  }
   const text = await res.text();
   const items = Array.from(text.matchAll(/<item>([\s\S]*?)<\/item>/g));
   return items.map((m: any) => {
@@ -26,6 +31,11 @@ export async function fetchRss(url: string): Promise<NewsArticle[]> {
  */
 export async function fetchArticle(url: string): Promise<string> {
   const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(
+      `Failed to fetch article (${res.status} ${res.statusText})`
+    );
+  }
   return await res.text();
 }
 

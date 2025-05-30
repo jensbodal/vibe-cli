@@ -9,4 +9,5 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [ ] Document deployment steps for the Bot-or-Not game
 - [x] Add TypeScript type packages
 - [x] Update README with agentic tools description
+- [x] Add fetch error handling
 

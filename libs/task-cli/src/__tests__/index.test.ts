@@ -10,8 +10,8 @@ global.fetch = ((input: RequestInfo | URL) => {
   return fetchMock(String(input));
 }) as typeof fetch;
 
-function makeResponse(body: string): Response {
-  return new Response(body, {status: 200});
+function makeResponse(body: string, status = 200, statusText = ''): Response {
+  return new Response(body, {status, statusText});
 }
 
 beforeEach(() => {
@@ -33,6 +33,16 @@ test('fetchArticle returns text', async () => {
   fetchMock = async () => makeResponse('hello world');
   const text = await fetchArticle('https://a/1');
   expect(text).toBe('hello world');
+});
+
+test('fetchRss throws on failure', async () => {
+  fetchMock = async () => makeResponse('oops', 500, 'Internal');
+  await expect(fetchRss('https://feed')).rejects.toThrow('Failed to fetch RSS feed');
+});
+
+test('fetchArticle throws on failure', async () => {
+  fetchMock = async () => makeResponse('nope', 404, 'Not Found');
+  await expect(fetchArticle('https://a/1')).rejects.toThrow('Failed to fetch article');
 });
 
 test('summarize returns first five lines', () => {

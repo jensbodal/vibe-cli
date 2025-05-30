@@ -1,11 +1,9 @@
 import fs from 'fs';
-import path from 'path';
 import {fileURLToPath} from 'url';
 import {maskMessage} from './mask';
 import {initBot} from './bot';
+import {PROMPT_PATH} from './promptPath';
 import type {Player} from './types';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export async function createServer(
   exp?: any,
@@ -28,8 +26,7 @@ export async function createServer(
 
   app.patch('/prompt', (req: any, res: any) => {
     const body = typeof req.body === 'string' ? req.body : req.body.prompt;
-    const promptPath = path.join(__dirname, '../../prompts/bot_system.txt');
-    fs.writeFileSync(promptPath, body);
+    fs.writeFileSync(PROMPT_PATH, body);
     res.json({ok: true});
   });
 

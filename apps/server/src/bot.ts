@@ -1,12 +1,7 @@
 import fs from 'fs';
-import path from 'path';
-import {fileURLToPath} from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import {Server} from 'socket.io';
 import type {Player} from './types';
-
-const PROMPT_PATH = path.join(__dirname, '../../prompts/bot_system.txt');
+import {PROMPT_PATH} from './promptPath';
 
 let systemPrompt = fs.readFileSync(PROMPT_PATH, 'utf8');
 fs.watch(PROMPT_PATH, () => {

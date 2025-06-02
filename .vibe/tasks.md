@@ -11,4 +11,5 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [x] Add TypeScript type packages
 - [x] Update README with agentic tools description
 - [x] Add fetch error handling
+- [x] [Create queue activity](tasks/create-queue-activity)
 

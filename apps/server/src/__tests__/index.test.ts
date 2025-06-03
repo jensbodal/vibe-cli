@@ -1,6 +1,6 @@
 import {expect, test} from 'bun:test';
 import {EventEmitter} from 'events';
-import {createServer} from '../index';
+import {createServer, runServer} from '../index';
 
 function makeExpress() {
   const handlers: Record<string, any> = {};
@@ -39,4 +39,20 @@ test('chat messages are masked and broadcast', async () => {
   socket.emit('chat:message', 'hello');
   await new Promise(r => setTimeout(r, 0));
   expect(messages[0].message).toBe('m:hello');
+});
+
+test('listen failure logs an error', () => {
+  const server: any = {
+    listen: (_: any, cb: (err?: Error) => void) => {
+      cb(new Error('fail'));
+    }
+  };
+  const errs: any[] = [];
+  const origError = console.error;
+  console.error = (msg: any) => errs.push(msg);
+
+  runServer(server, 3000);
+
+  console.error = origError;
+  expect(errs.some((m) => String(m).includes('server failed to start'))).toBe(true);
 });

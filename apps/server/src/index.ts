@@ -60,12 +60,20 @@ export async function createServer(
   return {app, server, io};
 }
 
+export function runServer(server: any, port: number | string) {
+  server.listen(port, (err?: Error) => {
+    if (err) {
+      console.error(`server failed to start: ${err.message}`);
+    } else {
+      console.log(`server running on ${port}`);
+    }
+  });
+}
+
 export async function start() {
   const {server} = await createServer();
   const port = process.env.PORT || 3000;
-  server.listen(port, () => {
-    console.log(`server running on ${port}`);
-  });
+  runServer(server, port);
 }
 
 if (import.meta.main) {

@@ -19,7 +19,8 @@
   },
   "workspaces": [
     "apps/*",
-    "libs/*"
+    "libs/*",
+    "agents/*"
   ],
   "scripts": {
     "nx": "nx",

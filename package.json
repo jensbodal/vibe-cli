@@ -24,6 +24,8 @@
   "scripts": {
     "nx": "nx",
     "start": "bun run index.ts",
-    "test": "bun test --coverage"
+    "test": "bun test --coverage",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
   }
 }

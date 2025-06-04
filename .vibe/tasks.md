@@ -13,6 +13,6 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [x] Add fetch error handling
 - [x] [Create queue activity](tasks/create-queue-activity)
 - [x] [Update monorepo for agentic infrastructure](tasks/update-monorepo-for-agentic-infrastructure)
-- [ ] [Fix invalid Nx targets](tasks/fix-invalid-nx-targets)
-- [ ] [Document local agentic development setup](tasks/document-local-agentic-development-setup)
+- [x] [Fix invalid Nx targets](tasks/fix-invalid-nx-targets)
+- [x] [Document local agentic development setup](tasks/document-local-agentic-development-setup)
 

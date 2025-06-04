@@ -127,3 +127,19 @@ Open the client in the browser and follow the prompts to join the chat room.
 
 Utility scripts live under the `scripts/` directory. `setup_codex.sh` clones the
 OpenAI Codex repository and installs its dependencies.
+
+### Local agentic development
+
+Use the helper script to start Redis and Ollama with Docker:
+
+```bash
+pnpm run local:setup
+```
+
+The script copies `.env.example` to `.env` if needed. Edit this file to adjust
+variables such as `REDIS_URL`, `OLLAMA_URL`, and model names. Visit
+`http://localhost:8001` for the Redis UI. Stop the containers when finished:
+
+```bash
+pnpm run local:stop
+```

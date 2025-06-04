@@ -12,7 +12,17 @@
     "@types/node": "^20.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "nx": "18.0.0"
+    "nx": "18.0.0",
+    "@nx/python": "^18.2.0",
+    "@nx/next": "^18.2.0",
+    "@langchain/langgraph": "^0.0.19",
+    "redis": "^4.6.0",
+    "@redis/search": "^1.1.0",
+    "ai": "^3.2.0",
+    "@ai-sdk/openai": "^0.0.9",
+    "socket.io-client": "^4.7.5",
+    "zustand": "^4.5.2",
+    "msw": "^2.3.0"
   },
   "peerDependencies": {
     "typescript": "^5"
@@ -24,6 +34,9 @@
   "scripts": {
     "nx": "nx",
     "start": "bun run index.ts",
-    "test": "bun test --coverage"
+    "test": "bun test --coverage",
+    "local:setup": "bash scripts/setup-local-dev.sh",
+    "local:start": "docker-compose -f docker-compose.local.yml up -d",
+    "local:stop": "docker-compose -f docker-compose.local.yml down"
   }
 }

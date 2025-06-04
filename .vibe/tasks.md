@@ -15,4 +15,5 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [x] [Document local development setup](tasks/document-local-dev-setup)
 - [x] [Setup AI tooling config](tasks/setup-ai-tooling-config)
 - [ ] [Enforce PR process](tasks/enforce-pr-process)
+- [ ] [Document reporter agent invocation](tasks/document-reporter-agent-invocation)
 

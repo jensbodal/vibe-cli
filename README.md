@@ -135,3 +135,27 @@ Open the client in the browser and follow the prompts to join the chat room.
 
 Utility scripts live under the `scripts/` directory. `setup_codex.sh` clones the
 OpenAI Codex repository and installs its dependencies.
+
+## Local development setup
+
+Start Redis and Ollama using the helper script and the `docker-compose.local.yml`
+file:
+
+```bash
+scripts/setup-local-dev.sh
+```
+
+Create a copy of `.env.example` named `.env` and adjust values like `REDIS_URL`
+and any model names to suit your environment.
+
+With the services running, launch the agentic apps:
+
+```bash
+pnpm agentic:dev
+```
+
+## AI tooling
+
+Sample configuration for various AI tools is provided under `docs/ai-tooling.md`.
+For tools that expect global configuration like AIChat or Codex CLI, copy the
+files from `dev-setup/` into your home directory.

@@ -13,4 +13,5 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [x] Add fetch error handling
 - [x] [Create queue activity](tasks/create-queue-activity)
 - [x] [Setup git hooks](tasks/setup-git-hooks)
-
+- [x] [Document local development setup](tasks/document-local-dev-setup)
+- [x] [Setup AI tooling config](tasks/setup-ai-tooling-config)

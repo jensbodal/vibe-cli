@@ -1,0 +1,2 @@
+#!/bin/sh
+[ $(git rev-list --left-right --count @{upstream}...HEAD | awk '{print $1+$2}') -ne 0 ] && exit 1

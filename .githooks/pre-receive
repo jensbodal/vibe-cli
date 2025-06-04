@@ -1,0 +1,2 @@
+#!/bin/sh
+git merge-tree $(git merge-base $old $new) $old $new >/dev/null

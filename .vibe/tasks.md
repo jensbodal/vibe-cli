@@ -17,3 +17,4 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [ ] [Enforce PR process](tasks/enforce-pr-process)
 - [ ] [Document reporter agent invocation](tasks/document-reporter-agent-invocation)
 
+- [ ] [Switch to Projen for config generation](tasks/switch-to-projen-configs)

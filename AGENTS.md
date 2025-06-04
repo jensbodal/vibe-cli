@@ -26,4 +26,15 @@ You can also use `pnpm nx <command>` if you prefer `pnpm`.
 * Update `README.md` and `mcp.json` if configuration or capabilities change.
 * Keep the project catalog `.vibe/projects.md` up to date when adding or removing Nx projects.
 * Ensure the `.vibe/tasks.md` file reflects the current outstanding tasks.
+* Before opening a pull request run:
+
+```bash
+git fetch origin main
+git rebase -i origin/main
+npm run lint
+npm test
+git push --force-with-lease
+```
+
+Your branch must contain a single commit on top of the latest `main` with no merge commits.
 

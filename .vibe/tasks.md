@@ -14,4 +14,5 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [x] [Create queue activity](tasks/create-queue-activity)
 - [x] [Document local development setup](tasks/document-local-dev-setup)
 - [x] [Setup AI tooling config](tasks/setup-ai-tooling-config)
+- [ ] [Enforce PR process](tasks/enforce-pr-process)
 

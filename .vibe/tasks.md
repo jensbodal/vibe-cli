@@ -12,4 +12,5 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [x] Update README with agentic tools description
 - [x] Add fetch error handling
 - [x] [Create queue activity](tasks/create-queue-activity)
+- [x] [Confirm agentic scripts](tasks/confirm-agentic-scripts)
 

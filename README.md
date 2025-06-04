@@ -130,8 +130,8 @@ OpenAI Codex repository and installs its dependencies.
 
 ## Local development setup
 
-Start Redis and Ollama using the helper script and the `docker-compose.local.yml`
-file:
+Start Redis and Ollama using the helper script. The script runs `docker compose`
+with the `docker-compose.local.yml` file included in the repo:
 
 ```bash
 scripts/setup-local-dev.sh
@@ -145,3 +145,9 @@ With the services running, launch the agentic apps:
 ```bash
 pnpm agentic:dev
 ```
+
+## AI tooling
+
+Sample configuration for various AI tools is provided under `docs/ai-tooling.md`.
+For tools that expect global configuration like AIChat or Codex CLI, copy the
+files from `dev-setup/` into your home directory.

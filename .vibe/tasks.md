@@ -16,6 +16,6 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [x] [Setup AI tooling config](tasks/setup-ai-tooling-config)
 - [ ] [Enforce PR process](tasks/enforce-pr-process)
 - [ ] [Document reporter agent invocation](tasks/document-reporter-agent-invocation)
-
+- [x] [Add agents workspace](tasks/add-agents-workspace)
 - [ ] [Switch to Projen for config generation](tasks/switch-to-projen-configs)
 - [ ] [Research AGNTCY open source projects](tasks/research-agntcy-open-source)

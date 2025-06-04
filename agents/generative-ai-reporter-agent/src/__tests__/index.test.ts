@@ -1,6 +1,7 @@
 import {rankRepos, generateReport} from '../index';
 import type {RepoInfo} from '../index';
 import type {RepoInfo} from '../index';
+import type {RepoInfo} from '../index';
 import {expect, test} from 'bun:test';
 
 test('rankRepos sorts by stars descending', () => {

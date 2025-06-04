@@ -123,6 +123,21 @@ pnpm --filter @bot-or-not/client dev
 
 Open the client in the browser and follow the prompts to join the chat room.
 
+### Generative AI reporter agent
+
+After installing dependencies you can run the reporter agent directly. Import
+`run()` from `agents/generative-ai-reporter-agent` and provide it with
+repository information:
+
+```ts
+import { run } from "agents/generative-ai-reporter-agent";
+
+run({
+  repoPath: "/path/to/repo",
+  branch: "main",
+});
+```
+
 ### Scripts
 
 Utility scripts live under the `scripts/` directory. `setup_codex.sh` clones the

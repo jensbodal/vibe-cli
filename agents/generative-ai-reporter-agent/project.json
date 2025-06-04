@@ -1,0 +1,16 @@
+{
+  "name": "generative-ai-reporter-agent",
+  "root": "agents/generative-ai-reporter-agent",
+  "sourceRoot": "agents/generative-ai-reporter-agent/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "outputPath": "dist/agents/generative-ai-reporter-agent",
+        "main": "agents/generative-ai-reporter-agent/src/index.ts",
+        "tsConfig": "agents/generative-ai-reporter-agent/tsconfig.lib.json"
+      }
+    }
+  }
+}

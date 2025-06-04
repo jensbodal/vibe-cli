@@ -17,6 +17,11 @@
       "name": "task-cli",
       "entry": "libs/task-cli",
       "description": "RSS news gatherer library"
+    },
+    {
+      "name": "generative-ai-reporter-agent",
+      "entry": "agents/generative-ai-reporter-agent",
+      "description": "Ranks repositories and generates a report"
     }
   ],
   "settings": {

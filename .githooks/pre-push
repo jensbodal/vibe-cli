@@ -1,0 +1,2 @@
+#!/bin/sh
+git fetch origin main && git merge-base --is-ancestor HEAD origin/main

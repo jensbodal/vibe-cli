@@ -1,0 +1,2 @@
+#!/bin/sh
+npx prettier -l $(git diff --cached --name-only) && npm run lint && npm test --bail

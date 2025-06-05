@@ -12,8 +12,4 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [x] Update README with agentic tools description
 - [x] Add fetch error handling
 - [x] [Create queue activity](tasks/create-queue-activity)
-- [x] [Document local development setup](tasks/document-local-dev-setup)
-- [x] [Setup AI tooling config](tasks/setup-ai-tooling-config)
-- [ ] [Fix missing local dev setup artifacts](tasks/fix-missing-local-dev-setup-artifacts)
-- [ ] [Switch to Projen for config generation](tasks/switch-to-projen)
 

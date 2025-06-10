@@ -1,0 +1,8 @@
+# Sample Operator ChatGPT (O1/CUA) instructions bootstrap
+# Place this file in your repo and prepend its contents to your first Operator prompt.
+codingStyle:
+  indent: 2 spaces
+  maxLineLength: 80
+review:
+  askAfterChange: true
+  branchNaming: feature/<description>

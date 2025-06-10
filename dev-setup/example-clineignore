@@ -1,0 +1,5 @@
+# Example .clineignore
+node_modules/
+vendor/
+dist/
+*.lock

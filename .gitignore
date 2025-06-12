@@ -140,3 +140,4 @@ dist
 
 # Nx build cache (v15+) and temporary files
 .nx/cache/
+.nx/workspace-data/

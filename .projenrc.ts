@@ -14,8 +14,8 @@ const project = new TypeScriptProject({
   defaultReleaseBranch: 'main',
   
   // Package management
-  packageManager: NodePackageManager.PNPM,
-  pnpmVersion: '8.x',
+  // Switch to Bun as requested
+  packageManager: NodePackageManager.BUN,
   
   // Module system
   jest: false, // We'll configure Jest separately with Nx
@@ -89,11 +89,6 @@ const project = new TypeScriptProject({
   ],
 
   // Workspace structure
-  workspaceLayout: {
-    appsDir: 'apps',
-    libsDir: 'libs',
-  },
-
   // TypeScript configuration
   sampleCode: false,
   

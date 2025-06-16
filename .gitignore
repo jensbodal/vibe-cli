@@ -136,6 +136,7 @@ dist
 .pnp.*
 .aider*
 !.aider.conf.yml
+.direnv/
 
 # Nx build cache (v15+) and temporary files
 .nx/cache/

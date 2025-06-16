@@ -1,0 +1,67 @@
+[
+  {
+    "number": 76,
+    "title": "Add dev script and Projen task docs",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/76"
+  },
+  {
+    "number": 69,
+    "title": "Add GenerativeAIReporterAgent",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/69"
+  },
+  {
+    "number": 68,
+    "title": "Add agentic setup guidance",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/68"
+  },
+  {
+    "number": 66,
+    "title": "Add agentic setup guidance",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/66"
+  },
+  {
+    "number": 65,
+    "title": "Document absence of agentic scripts",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/65"
+  },
+  {
+    "number": 64,
+    "title": "Setup git hooks",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/64"
+  },
+  {
+    "number": 58,
+    "title": "Remove duplicate prompt file",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/58"
+  },
+  {
+    "number": 55,
+    "title": "Add evaluation task for example agent",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/55"
+  },
+  {
+    "number": 54,
+    "title": "Resolve merge conflict and unify prompt path",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/54"
+  },
+  {
+    "number": 53,
+    "title": "Add GenerativeAIReporterAgent",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/53"
+  },
+  {
+    "number": 52,
+    "title": "Add GenerativeAIReporterAgent",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/52"
+  },
+  {
+    "number": 49,
+    "title": "Remove duplicate prompt file",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/49"
+  },
+  {
+    "number": 48,
+    "title": "Add evaluation task for example agent",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/48"
+  }
+]

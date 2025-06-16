@@ -1,0 +1,57 @@
+[
+  {
+    "number": 82,
+    "title": "feat: Bootstrap projen configuration management with NxConfigComponent",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/82"
+  },
+  {
+    "number": 80,
+    "title": "Add dev script and Projen task docs",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/80"
+  },
+  {
+    "number": 78,
+    "title": "Document absence of agentic scripts",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/78"
+  },
+  {
+    "number": 75,
+    "title": "Add agents workspace",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/75"
+  },
+  {
+    "number": 74,
+    "title": "Add usage example and tests for GenerativeAIReporterAgent",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/74"
+  },
+  {
+    "number": 71,
+    "title": "Add AI tooling templates and CI scaffold",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/71"
+  },
+  {
+    "number": 70,
+    "title": "Add GenerativeAIReporterAgent",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/70"
+  },
+  {
+    "number": 62,
+    "title": "Handle server listen errors",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/62"
+  },
+  {
+    "number": 59,
+    "title": "Remove duplicate prompt file",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/59"
+  },
+  {
+    "number": 56,
+    "title": "Add GenerativeAIReporterAgent",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/56"
+  },
+  {
+    "number": 51,
+    "title": "Add runtime engine requirements",
+    "url": "https://github.com/jensbodal/vibe-cli/pull/51"
+  }
+]

@@ -30,7 +30,9 @@ These PRs contain valuable changes and should be reviewed further:
    - `git rebase origin/main`
    - Resolve conflicts if any
    - Push updated branch if needed
-2. Review code and test locally
+2. Review code and test locally:
+   - `bun test --coverage`
+   - `npx tsc --noEmit`
 3. Leave comments or approve for merge
 
 ---
@@ -48,34 +50,51 @@ These PRs are outdated, duplicated, or no longer relevant:
 
 ---
 
-## Automation (Optional)
+## Automation
 
-Create a script to automate the fetch, checkout, and rebase process:
+Use the provided script to automate the fetch, checkout, and rebase process:
 
 ```bash
 #!/bin/bash
 set -e
 
-for pr in 82 80 78 75 74 71 70 62 59 56 51; do
-  echo "Processing PR #$pr"
+declare -a prs=(82 80 78 75 74 71 70 62 59 56 51)
+
+for pr in "${prs[@]}"; do
+  echo "➡️ Processing PR #$pr"
   git fetch origin pull/$pr/head:pr-$pr
   git checkout pr-$pr
-  git rebase origin/main || {
-    echo "Conflict in PR #$pr, resolve manually"
+  if ! git rebase origin/main; then
+    echo "❌ Conflict detected in PR #$pr"
+    echo "Resolve conflicts manually then run:"
+    echo "  git rebase --continue"
+    echo "  git push --force-with-lease"
     exit 1
-  }
+  fi
+  echo "✅ PR #$pr successfully rebased"
 done
+
+echo ""
+echo "🎉 All PR branches updated and rebased"
+echo "Next steps:"
+echo "1. Review each branch: git checkout pr-<NUM>"
+echo "2. Run tests: bun test --coverage"
+echo "3. Push updates: git push --force-with-lease"
 ```
 
-Save as `scripts/rebase-prs.sh` and run with `bash scripts/rebase-prs.sh`.
+Save as `scripts/rebase-prs.sh` and run with:
+
+```bash
+bash scripts/rebase-prs.sh
+```
 
 ---
 
 ## Timeline
 
-- Day 1: Rebase and review all PRs in review list
-- Day 2: Close all PRs in close list
-- Day 3: Merge approved PRs
+- **Day 1**: Rebase and review all PRs in review list
+- **Day 2**: Close all PRs in close list
+- **Day 3**: Merge approved PRs
 
 ---
 

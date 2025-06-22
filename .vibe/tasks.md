@@ -18,3 +18,4 @@ corresponding folder under `.vibe/tasks` with additional documentation.
 - [ ] [Document reporter agent invocation](tasks/document-reporter-agent-invocation)
 
 - [ ] [Switch to Projen for config generation](tasks/switch-to-projen-configs)
+- [ ] [Research AGNTCY open source projects](tasks/research-agntcy-open-source)

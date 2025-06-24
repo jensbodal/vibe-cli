@@ -1,4 +1,4 @@
-# slug: git-local-branch-maintenance
+# slug: git-local-branch-maintenance-prompt
 
 [TASK]
 Clean local Git branches

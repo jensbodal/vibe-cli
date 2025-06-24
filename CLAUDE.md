@@ -4,119 +4,105 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is a personal shell settings and dotfiles repository that provides:
-- Comprehensive shell configuration (zsh, vim, direnv)
-- Cross-platform development environment setup
-- Custom utility scripts and tools
-- AI/LLM client tooling
-- System automation and benchmarking tools
-- Infrastructure management utilities (Proxmox, containers)
+This is a TypeScript/Node.js repository that collects agentic development tools and example applications built around the Model Context Protocol (MCP). It uses:
+- **Bun** as the runtime (v1.2.10+)
+- **Nx** for monorepo management
+- **TypeScript** in strict mode
+- **Model Context Protocol (MCP)** for AI tool integration
 
 ## Setup Commands
 
 ### Initial Setup
 ```bash
-# Install prerequisites and setup environment
-./setup.sh              # Main setup script - creates symlinks and basic config
-./post_setup.sh          # Install package managers, tools, and runtime environments
-npm install              # Install Node.js dependencies and setup pre-commit hooks
+# Install dependencies (requires network access)
+bun install
+
+# Run the main project
+bun run index.ts
+
+# Setup Codex integration (optional)
+scripts/setup_codex.sh
 ```
 
-### Python Development
+### Development Commands
 ```bash
-# Install Python dependencies
-pip install -e .[dev]    # Install package in development mode with dev dependencies
-pytest                   # Run Python tests
-black .                  # Format Python code
-isort .                  # Sort imports
+# Run tests with coverage
+bun test --coverage
+
+# Run Nx commands
+bun run nx <command>          # Using bun
+pnpm nx <command>             # Using pnpm (alternative)
+
+# Run specific app/lib
+bun run libs/task-cli/src/index.ts <rss-feed-url>
 ```
 
-### Git Hooks
+### Bot-or-Not Game
 ```bash
-# Setup pre-commit hooks (automatically done via npm install)
-pkgx pre-commit install --install-hooks --hook-type pre-commit --hook-type pre-push
+# Run server and client (requires Node 18+ and pnpm)
+pnpm --filter @bot-or-not/server dev
+pnpm --filter @bot-or-not/client dev
 ```
 
 ## Architecture
 
 ### Core Components
 
-**Shell Configuration System**
-- `.zshrc` - Main zsh configuration with modular loading
-- `.generic.env` - Cross-platform environment variables
-- `setup_symlinks.sh` - Manages symlinks from this repo to home directory
-- `scripts/_INIT` - Common initialization script providing logging, error handling, and utilities
+**Nx Monorepo Structure**
+- `apps/` - Applications (server, client, prompts)
+- `libs/` - Shared libraries (task-cli)
+- `agents/` - AI agent implementations
+- `.vibe/` - Agent metadata and task management
 
-**Package Management Strategy**
-- Uses `mise` (formerly rtx) for runtime version management
-- Falls back to native package managers (brew, apt, pacman)
-- Custom `pkgx` integration for reproducible tooling
-- Maintains `~/local/` prefix for user-installed binaries
+**Key Applications**
+- `apps/server/` - Node.js server with TypeScript, includes bot logic and routes
+- `apps/client/` - React client with Vite, Tailwind CSS
+- `apps/prompts/` - System prompts for bots
+- `libs/task-cli/` - RSS news gatherer utility
 
-**Scripts Architecture**
-- `scripts/` directory contains 60+ utility scripts
-- All scripts can source `scripts/_INIT` for common functionality
-- Platform-specific scripts in `scripts/osx/`, `scripts/proxmox/`, etc.
-- Script path automatically added to PATH via `_INIT`
+### Testing Strategy
+- Tests located in `__tests__/` directories within each project
+- Uses Bun's built-in test runner
+- Coverage reports available via `bun test --coverage`
+- Example test files: `apps/server/src/__tests__/*.test.ts`
 
-### LLM Integration
+## Branch Naming Conventions
 
-**LLM Client (`llm_cli.py`, `llm_client.py`)**
-- Python-based CLI for interacting with various LLM APIs
-- Automatic fallback capability between different LLM providers
-- Configurable model selection and parameters
-- Environment variable driven configuration
+When creating branches, use the `claude/` prefix (e.g., `claude/add-feature`, `claude/fix-bug`).
+Other AI tools should use their respective prefixes as documented in `AGENTS.md`.
 
-**AI Benchmarking (`ai/benchmark/`)**
-- Systematic benchmarking across different LLM models
-- Results stored by model, architecture, and system configuration
-- MCP (Model Context Protocol) specification testing
+## Key Configuration Files
 
-#### Development Environment
+- `nx.json` - Nx workspace configuration
+- `tsconfig.base.json` - Base TypeScript configuration
+- `package.json` - Main dependencies and scripts
+- `mcp.json` - Model Context Protocol configuration
+- `codex.yaml` - Codex integration settings
+- `.vibe/` - Agent task management and metadata
 
-**Branch Naming Conventions**
-- When creating branches, use the `claude/` prefix (e.g., `claude/add-feature`, `claude/fix-bug`)
-- Other AI tools should use their respective prefixes as documented in `AGENTS.md`
-- This helps maintain clear attribution and prevents conflicts between different AI coding tools
+## Environment Requirements
 
-**Pre-commit Hooks**
-- Uses `trufflehog` for secret detection on pre-push
-- Uses `gitleaks` for additional security scanning
-- All tools managed via `pkgx` for reproducibility
+- **Node.js 18+** - Required for running applications
+- **Bun v1.2.10+** - Primary runtime and package manager
+- **pnpm** - Alternative package manager (optional)
+- **LLM Server** - Ollama or LocalAI for bot functionality
 
-**Dev Container Support**
-- `.devcontainer/devcontainer.json` provides containerized development
-- Includes Python, Node.js, Rust toolchains
-- Automatic setup via `postCreateCommand`
+## Environment Variables
 
-## Key Global Variables
-
-When scripts source `_INIT`, these variables become available:
-- `$SHELL_SETTINGS_DIR` - Path to this repository
-- `$SCRIPTS_DIR` - Path to scripts directory  
-- `$(.SCRIPT_DIR)` - Function returning current script's directory
-- `$(.SCRIPT_NAME)` - Function returning current script name
-
-## Important Files
-
-- `setup.sh` / `post_setup.sh` - Environment bootstrap scripts
-- `setup_symlinks.sh` - Dotfile symlink management
-- `scripts/_INIT` - Common script initialization and utilities
-- `.pre-commit-config.yaml` - Git hook configuration using pkgx
-- `pyproject.toml` - Python package configuration with dev dependencies
-- `package.json` - Node.js dependencies and npm scripts for pre-commit setup
+For Bot-or-Not game:
+- `OLLAMA_BASE_URL` - Ollama server endpoint
+- `OPENAI_BASE_URL` and `OPENAI_API_KEY` - OpenAI-compatible API
+- `REDIS_URL` - Redis connection string
 
 ## Testing
 
-- Python tests: `pytest` (test files: `test_*.py`)
-- Manual testing: `integration_test.py` for LLM client functionality
-- No automated test runners configured - tests run manually
+TypeScript builds must pass with `tsc --noEmit` using strict mode configuration.
+All tests should be written using Bun's test framework in `__tests__/` directories.
 
-## Platform Support
+## AI Integration
 
-Designed to work across:
-- macOS (Darwin) with Homebrew and system-specific optimizations
-- Linux (Ubuntu/Debian, Arch, RHEL-based) with native package managers
-- ARM64/aarch64 and x86_64 architectures
-- Proxmox virtualization environments
-- Development containers
+This repository is designed to work with various AI coding tools:
+- Model Context Protocol (MCP) support via `mcp.json`
+- Agent configuration in `AGENTS.md`
+- Task management in `.vibe/tasks/`
+- AI tool configurations in `dev-setup/`

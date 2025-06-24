@@ -4,6 +4,8 @@ This repository includes sample configuration files for several AI assistant too
 
 | Tool                             | Config Path(s)                                  | Notes                                                                                 |
 |----------------------------------|-------------------------------------------------|---------------------------------------------------------------------------------------|
+| **Agents Shell**                 | `AGENTS.md`                                      | Agent workflow, branch naming, and devcontainer configuration for AI agents           |
+| **Claude Code**                  | `CLAUDE.md`                                      | Guidance for Claude Code (claude.ai/code) when working with this repository           |
 | **AIChat CLI**                   | `dev-setup/aichat-config.yaml`                  | Copy to `~/.config/aichat/config.yaml`                                                |
 | **Aider CLI**                    | `.aider.conf.yml`                               | Merges global/home and project configs; supports CLI flags, env vars, and `.env`       |
 | **Codex CLI**                    | `dev-setup/codex-config.yaml` → `~/.codex/config.yaml` | Restricts allowed commands, safeCommands, and approvalMode                               |

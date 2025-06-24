@@ -25,10 +25,9 @@
     "strictPropertyInitialization": true,
     "stripInternal": true,
     "target": "ESNext",
-    "moduleDetection": "force",
+    "moduleResolution": "node",
     "jsx": "react-jsx",
     "allowJs": true,
-    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
@@ -37,8 +36,13 @@
     "noPropertyAccessFromIndexSignature": false
   },
   "include": [
-    "src/**/*.ts",
+    "./**/*.ts",
     "test/**/*.ts",
+    "*.ts",
+    "apps/**/*.ts",
+    "apps/**/*.tsx",
+    "libs/**/*.ts",
+    "agents/**/*.ts",
     ".projenrc.js"
   ],
   "exclude": [

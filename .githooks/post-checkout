@@ -1,0 +1,2 @@
+#!/bin/sh
+git fetch -q && [ $(git rev-list --left-right --count @{upstream}...HEAD | cut -f2) -gt 0 ] && echo "Branch behind upstream"

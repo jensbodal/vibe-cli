@@ -1,1 +1,1 @@
-export * from './nx-config';
+export * from './nx-config.js';

@@ -81,6 +81,13 @@ bun run nx <command>
 
 `pnpm nx <command>` works as well if you prefer `pnpm`.
 
+## Git hooks
+
+Run `git config core.hooksPath .githooks` after cloning to enable the
+repository's shared hooks. They lint on commit, enforce Conventional Commit 
+message format, check branches are up-to-date before pushing, sync dependencies 
+when lockfiles change, and warn about stale branches.
+
 ## Project Catalog
 
 The `.vibe/projects.md` file lists all Nx projects. Update it whenever you add or remove a project.

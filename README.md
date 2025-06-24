@@ -87,11 +87,16 @@ The `.vibe/projects.md` file lists all Nx projects. Update it whenever you add o
 
 ## Running tests
 
-Execute the unit tests with Bun. The server tests live under
-`apps/server/src/__tests__`:
+Run all unit tests across the workspace using the test script:
 
 ```bash
-bun test --coverage
+bun run test
+```
+
+To include coverage reports, pass the `--coverage` flag:
+
+```bash
+bun run test -- --coverage
 ```
 
 ## Included tools and examples

@@ -100,7 +100,13 @@ This repository uses TypeScript in **strict mode**. Ensure all code builds with 
 Run the full test suite before submitting a pull request:
 
 ```bash
-bun test --coverage
+bun run test
+```
+
+To include coverage reports:
+
+```bash
+bun run test -- --coverage
 ```
 
 ## Nx Workspace

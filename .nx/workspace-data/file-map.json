@@ -1,0 +1,422 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.2.0",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "task-cli": [
+        {
+          "file": "libs/task-cli/project.json",
+          "hash": "4416139738014813333"
+        },
+        {
+          "file": "libs/task-cli/src/__tests__/index.test.ts",
+          "hash": "230902543077320086"
+        },
+        {
+          "file": "libs/task-cli/src/index.ts",
+          "hash": "6812674653040326887"
+        },
+        {
+          "file": "libs/task-cli/tsconfig.lib.json",
+          "hash": "5570607986138178081"
+        }
+      ],
+      "server": [
+        {
+          "file": "apps/server/package.json",
+          "hash": "3219399728849420133"
+        },
+        {
+          "file": "apps/server/project.json",
+          "hash": "10045037952314877545"
+        },
+        {
+          "file": "apps/server/src/__tests__/bot.test.ts",
+          "hash": "1050744088934550773"
+        },
+        {
+          "file": "apps/server/src/__tests__/index.test.ts",
+          "hash": "10105221498074637844"
+        },
+        {
+          "file": "apps/server/src/__tests__/mask.test.ts",
+          "hash": "11662054536813993146"
+        },
+        {
+          "file": "apps/server/src/__tests__/routes.test.ts",
+          "hash": "12980544755385933086"
+        },
+        {
+          "file": "apps/server/src/bot.ts",
+          "hash": "1090745681519689941"
+        },
+        {
+          "file": "apps/server/src/external.d.ts",
+          "hash": "17339057979056382919"
+        },
+        {
+          "file": "apps/server/src/index.ts",
+          "hash": "17419389234907297891"
+        },
+        {
+          "file": "apps/server/src/mask.ts",
+          "hash": "18030057771780501063"
+        },
+        {
+          "file": "apps/server/src/types.ts",
+          "hash": "13618869651715553606"
+        },
+        {
+          "file": "apps/server/tsconfig.app.json",
+          "hash": "17207126480566844257"
+        }
+      ],
+      "client": [
+        {
+          "file": "apps/client/package.json",
+          "hash": "145714512379936841"
+        },
+        {
+          "file": "apps/client/postcss.config.js",
+          "hash": "17789872283383255573"
+        },
+        {
+          "file": "apps/client/project.json",
+          "hash": "9169914815415034746"
+        },
+        {
+          "file": "apps/client/src/App.tsx",
+          "hash": "47578927551517558"
+        },
+        {
+          "file": "apps/client/src/index.css",
+          "hash": "2866083945719690482"
+        },
+        {
+          "file": "apps/client/src/main.tsx",
+          "hash": "8447948653633784001"
+        },
+        {
+          "file": "apps/client/tailwind.config.js",
+          "hash": "17726143931548328984"
+        },
+        {
+          "file": "apps/client/tsconfig.app.json",
+          "hash": "1974842512105991532"
+        },
+        {
+          "file": "apps/client/vite.config.ts",
+          "hash": "13870648512457365960"
+        }
+      ]
+    },
+    "nonProjectFiles": [
+      {
+        "file": ".codex/config.yaml",
+        "hash": "15207493712392773490"
+      },
+      {
+        "file": ".cursor/mcp.json",
+        "hash": "14737007503429296991"
+      },
+      {
+        "file": ".devcontainer/devcontainer.json",
+        "hash": "1626831194140889444"
+      },
+      {
+        "file": ".env.example",
+        "hash": "2006552534362895370"
+      },
+      {
+        "file": ".github/copilot-instructions.md",
+        "hash": "9145649326291459364"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "633135027226281106"
+      },
+      {
+        "file": ".github/workflows/secret-scan.yml",
+        "hash": "18256034654631657064"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13954230222082761952"
+      },
+      {
+        "file": ".gitleaks.toml",
+        "hash": "12833096190275893196"
+      },
+      {
+        "file": ".projen/components/index.ts",
+        "hash": "12017498718877219577"
+      },
+      {
+        "file": ".projen/components/nx-config.ts",
+        "hash": "13294231372065476127"
+      },
+      {
+        "file": ".projenrc.ts",
+        "hash": "12070937396460664305"
+      },
+      {
+        "file": ".vibe/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".vibe/README.md",
+        "hash": "749281178927253152"
+      },
+      {
+        "file": ".vibe/projects.md",
+        "hash": "7925191411161460391"
+      },
+      {
+        "file": ".vibe/queue/README.md",
+        "hash": "8740246542784427612"
+      },
+      {
+        "file": ".vibe/queue/activity-20250530212016-genic-demo-plan.md",
+        "hash": "17696072118742834141"
+      },
+      {
+        "file": ".vibe/tasks.md",
+        "hash": "15802988155506073764"
+      },
+      {
+        "file": ".vibe/tasks/add-fetch-error-handling/task-add-fetch-error-handling.md",
+        "hash": "4702385101254902270"
+      },
+      {
+        "file": ".vibe/tasks/add-main-routes-socket-tests/task-add-main-routes-socket-tests.md",
+        "hash": "292337814673452574"
+      },
+      {
+        "file": ".vibe/tasks/add-server-tests/task-add-server-tests.md",
+        "hash": "12627858268425708769"
+      },
+      {
+        "file": ".vibe/tasks/add-server-tests/user-instructions.md",
+        "hash": "4009058069868126956"
+      },
+      {
+        "file": ".vibe/tasks/add-types-dev-deps/task-add-types-dev-deps.md",
+        "hash": "14210298890346325293"
+      },
+      {
+        "file": ".vibe/tasks/confirm-agentic-scripts/task-confirm-agentic-scripts.md",
+        "hash": "9332270334621765776"
+      },
+      {
+        "file": ".vibe/tasks/confirm-agentic-scripts/user-instructions.md",
+        "hash": "10392820882992127075"
+      },
+      {
+        "file": ".vibe/tasks/create-example-agent/task-create-example-agent.md",
+        "hash": "15074609482037601755"
+      },
+      {
+        "file": ".vibe/tasks/create-queue-activity/task-create-queue-activity.md",
+        "hash": "14663099336792525006"
+      },
+      {
+        "file": ".vibe/tasks/document-bot-or-not-deployment/task-document-bot-or-not-deployment.md",
+        "hash": "2666790683625712811"
+      },
+      {
+        "file": ".vibe/tasks/document-examples-and-utilities/task-document-examples-and-utilities.md",
+        "hash": "12379958397715021269"
+      },
+      {
+        "file": ".vibe/tasks/document-local-dev-setup/task-document-local-dev-setup.md",
+        "hash": "12848239471770669692"
+      },
+      {
+        "file": ".vibe/tasks/document-reporter-agent-invocation/task-document-reporter-agent-invocation.md",
+        "hash": "17549284411893882612"
+      },
+      {
+        "file": ".vibe/tasks/enforce-pr-process/task-enforce-pr-process.md",
+        "hash": "3463475233416943495"
+      },
+      {
+        "file": ".vibe/tasks/evaluate-example-agent/task-evaluate-example-agent.md",
+        "hash": "10043404449126156874"
+      },
+      {
+        "file": ".vibe/tasks/improve-test-coverage-server/task-improve-test-coverage-server.md",
+        "hash": "7486732849482245815"
+      },
+      {
+        "file": ".vibe/tasks/install-server-deps-and-tests/task-install-server-deps-and-tests.md",
+        "hash": "403536785679809222"
+      },
+      {
+        "file": ".vibe/tasks/remove-example-agent/task-remove-example-agent.md",
+        "hash": "4948349302861992951"
+      },
+      {
+        "file": ".vibe/tasks/replace-dirname-import-meta-url/task-replace-dirname-import-meta-url.md",
+        "hash": "43886169424672706"
+      },
+      {
+        "file": ".vibe/tasks/setup-ai-tooling-config/task-setup-ai-tooling-config.md",
+        "hash": "53672271672445548"
+      },
+      {
+        "file": ".vibe/tasks/switch-to-projen-configs/task-switch-to-projen-configs-create-custom-classes.md",
+        "hash": "8500182500279082964"
+      },
+      {
+        "file": ".vibe/tasks/switch-to-projen-configs/task-switch-to-projen-configs-nx-tooling.md",
+        "hash": "1880163609400609240"
+      },
+      {
+        "file": ".vibe/tasks/switch-to-projen-configs/task-switch-to-projen-configs.md",
+        "hash": "11146608169415138571"
+      },
+      {
+        "file": ".vibe/tasks/update-readme-agentic-tools/task-update-readme-agentic-tools.md",
+        "hash": "14974965833936081116"
+      },
+      {
+        "file": ".windsurf/settings.json",
+        "hash": "14258123529492421566"
+      },
+      {
+        "file": "AGENTS.md",
+        "hash": "5703962501250322138"
+      },
+      {
+        "file": "CONTRIBUTING.md",
+        "hash": "18316596431847866600"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "9758804958655267456"
+      },
+      {
+        "file": "README.md",
+        "hash": "11499715428031551048"
+      },
+      {
+        "file": "agents/example/__tests__/index.test.ts",
+        "hash": "11825241946240917727"
+      },
+      {
+        "file": "agents/example/index.ts",
+        "hash": "17569817904232619350"
+      },
+      {
+        "file": "apps/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/prompts/bot_system.txt",
+        "hash": "1131626491723749230"
+      },
+      {
+        "file": "bun.lock",
+        "hash": "14723300338525298038"
+      },
+      {
+        "file": "codex.yaml",
+        "hash": "13132407909928817262"
+      },
+      {
+        "file": "dev-setup/aichat-config.yaml",
+        "hash": "12145221043064794459"
+      },
+      {
+        "file": "dev-setup/codex-config.yaml",
+        "hash": "1968502834200301950"
+      },
+      {
+        "file": "dev-setup/example-clineignore",
+        "hash": "6737893067260221084"
+      },
+      {
+        "file": "dev-setup/example-clinerules.md",
+        "hash": "7265109113631323353"
+      },
+      {
+        "file": "dev-setup/example-cursor-rule.md",
+        "hash": "16078794733973817215"
+      },
+      {
+        "file": "dev-setup/example-windsurf-rule.md",
+        "hash": "8943880781524384389"
+      },
+      {
+        "file": "dev-setup/operator-instructions.yaml",
+        "hash": "11032722471398964471"
+      },
+      {
+        "file": "docs/ai-tooling-reference.md",
+        "hash": "12210140093472604115"
+      },
+      {
+        "file": "docs/ai-tooling.md",
+        "hash": "1511985761699372141"
+      },
+      {
+        "file": "index.ts",
+        "hash": "6889854138616979135"
+      },
+      {
+        "file": "install-chrome.sh",
+        "hash": "6295606865253697383"
+      },
+      {
+        "file": "libs/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "mcp.json",
+        "hash": "5935228666237678223"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10306539837203279242"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "626971451391697957"
+      },
+      {
+        "file": "package.json",
+        "hash": "25814821412365896"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "9572543859431228124"
+      },
+      {
+        "file": "prompts/bot_system.txt",
+        "hash": "1131626491723749230"
+      },
+      {
+        "file": "scripts/setup_codex.sh",
+        "hash": "1329017617091595948"
+      },
+      {
+        "file": "scripts/setup_codex_cli.sh",
+        "hash": "9611143144677109913"
+      },
+      {
+        "file": "scripts/smoke.sh",
+        "hash": "7351938077818428712"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5370097835674769431"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "14622916615014031204"
+      }
+    ]
+  }
+}

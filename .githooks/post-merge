@@ -1,0 +1,2 @@
+#!/bin/sh
+git diff --name-only HEAD@{1} HEAD | grep -Eq 'bun.lock|pnpm-lock.yaml|package-lock.json|yarn.lock' && bun install

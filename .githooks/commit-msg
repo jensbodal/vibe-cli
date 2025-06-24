@@ -1,0 +1,2 @@
+#!/bin/sh
+grep -Eq '^(feat|fix|docs|style|refactor|test|chore)(\([^)]+\))?: ' "$1"

@@ -1,5 +1,4 @@
 import { typescript, javascript } from 'projen';
-import { NxConfigComponent } from './.projen/components/index';
 
 /**
  * Main projen configuration for vibe-cli
@@ -24,12 +23,11 @@ const project = new typescript.TypeScriptProject({
       lib: ['DOM', 'ESNext'],
       target: 'ESNext',
       module: 'ESNext',
-      moduleDetection: 'force',
-      jsx: 'react-jsx',
+      moduleResolution: 'node', // Required for resolveJsonModule
+      jsx: 'react-jsx', // Support JSX
       allowJs: true,
 
-      // Bundler mode
-      moduleResolution: 'bundler',
+      // ES Module support
       allowImportingTsExtensions: true,
       verbatimModuleSyntax: true,
       noEmit: true,
@@ -45,6 +43,13 @@ const project = new typescript.TypeScriptProject({
       noUnusedParameters: false,
       noPropertyAccessFromIndexSignature: false,
     },
+    include: [
+      '*.ts',
+      'apps/**/*.ts',
+      'apps/**/*.tsx', 
+      'libs/**/*.ts',
+      'agents/**/*.ts'
+    ],
   },
 
   // Dependencies
@@ -82,15 +87,17 @@ const project = new typescript.TypeScriptProject({
     'nx-cloud@latest',
     'ts-jest@^29.1.1',
     'ts-node@^10.9.2',
-    'typescript@^5.0.0',
+    'typescript@^5.8.3',
   ],
   peerDeps: [
-    'typescript@^5.0.0',
+    'typescript@^5.8.3',
   ],
 
   // Workspace structure
   // TypeScript configuration
   sampleCode: false,
+  srcdir: '.', // Use root directory, not src/
+  libdir: 'dist', // Output to dist/
   
   // GitHub settings - anti-tamper disabled for POC
   github: false,
@@ -100,36 +107,69 @@ const project = new typescript.TypeScriptProject({
     'coverage',
     '.env',
     '.nx/cache',
+    '.nx/workspace-data', // Nx workspace cache files
     '**/.DS_Store',
+    
+    // Development environment files
+    '.envrc.local',
+    '__pycache__/',
+    '/.direnv/',
+    '/.idea/',
+    '/.trash/',
+    
+    // Private files
+    '.private/.*.*',
+    '.private/*.*',
+    '!.private/.gitkeep',
+    '*.key',
+    '*.crt',
+    
+    // macOS
+    'macos/automator/testing.workflow/',
+    
+    // Project specific
+    '/node_modules/',
+    '/scripts/ideas/work/',
+    '/scripts/moxi/.ai/logs',
+    '.DS_Store',
+    '.aider.chat.history.md', // Aider chat history (not config)
+    '.aider.input.history',   // Aider input history (not config)
+    '.aider.tags.cache.v4/',  // Aider tag cache (not config)
+    '/ai/lib/',
+    'vault.yml',
+    
+    // Dependencies we never want to scan or push
+    '.direnv/',
+    '.venv/',
+    'node_modules/',
+    'site-packages/',
+    
+    // Claude Code local settings
+    '.claude/**',
   ],
 
-  // Package.json customization for Bun compatibility
-  package: {
-    type: 'module',
-    scripts: {
-      'nx': 'nx',
-      'start': 'bun run index.ts',
-      'test': 'nx run-many --target=test --all',
-      'lint': 'nx run-many --target=lint --all',
-      'typecheck': 'tsc --noEmit',
-      'build': 'nx run-many --target=build --all',
-      'dev': 'nx run-many --target=dev --all',
-      'affected:test': 'nx affected --target=test',
-      'affected:lint': 'nx affected --target=lint',
-      'affected:build': 'nx affected --target=build',
-      'graph': 'nx graph',
-      'format': 'nx format:write',
-    },
-  },
+  // Additional configuration will be handled by postSynthesize
 });
 
-// Add Nx configuration
-new NxConfigComponent(project, {
-  version: '21.2.0',
-  appsDir: 'apps',
-  libsDir: 'libs',
-  defaultBase: 'main',
-});
+// Note: Nx configuration will be managed manually for now
+
+// Customize package.json after synthesis
+project.package.addField('type', 'module');
+project.package.setScript('nx', 'nx');
+project.package.setScript('start', 'bun run index.ts');
+project.package.setScript('test', 'nx run-many --target=test --all');
+project.package.setScript('lint', 'nx run-many --target=lint --all');
+project.package.setScript('typecheck', 'tsc --noEmit');
+project.package.setScript('build', 'nx run-many --target=build --all');
+project.package.setScript('dev', 'nx run-many --target=dev --all');
+project.package.setScript('affected:test', 'nx affected --target=test');
+project.package.setScript('affected:lint', 'nx affected --target=lint');
+project.package.setScript('affected:build', 'nx affected --target=build');
+project.package.setScript('graph', 'nx graph');
+project.package.setScript('format', 'nx format:write');
+
+// Allow the JS file to be committed
+project.gitignore.include('!/.projenrc.js');
 
 // Synthesize the project
 project.synth();

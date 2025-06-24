@@ -73,12 +73,16 @@ Other AI tools should use their respective prefixes as documented in `AGENTS.md`
 
 ## Key Configuration Files
 
-- `nx.json` - Nx workspace configuration
-- `tsconfig.base.json` - Base TypeScript configuration
-- `package.json` - Main dependencies and scripts
+- `.projenrc.ts` - Projen configuration for generating project files
+- `.projenrc.js` - ES module wrapper for projen (auto-generated)
+- `nx.json` - Nx workspace configuration (managed by projen)
+- `tsconfig.json` - TypeScript configuration (managed by projen)
+- `package.json` - Main dependencies and scripts (managed by projen)
 - `mcp.json` - Model Context Protocol configuration
 - `codex.yaml` - Codex integration settings
 - `.vibe/` - Agent task management and metadata
+
+**Note**: Files marked as "managed by projen" are auto-generated. Edit `.projenrc.ts` and run `bun run projen` to update them.
 
 ## Environment Requirements
 

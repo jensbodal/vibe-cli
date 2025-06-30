@@ -98,6 +98,9 @@ Launch agentic apps with:
 pnpm agentic:dev
 ```
 
+The `.idea` folder can be used for local proof-of-concept work and is not part of the main project.
+
 ## AI Tooling
 
 Sample configurations for various AI tools are available in `docs/ai-tooling.md`. For tools requiring global configuration (e.g., AIChat, Codex CLI), copy files from `dev-setup/` to your home directory.
+

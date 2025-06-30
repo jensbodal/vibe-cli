@@ -51,14 +51,24 @@ macos/automator/testing.workflow/
 .DS_Store
 .aider.chat.history.md
 .aider.input.history
-.aider.tags.cache.v4/
-/ai/lib/
+    .aider.tags.cache.v4/,  // Aider tag cache (not config)
+    /ai/lib/
 vault.yml
-.direnv/
-.venv/
-node_modules/
+    
+    // Local tool configurations
+    .codex/
+    .crwl/
+    .cursor/
+    .windsurf/
+    
+    // Dependencies we never want to scan or push
+    .direnv/
+    .venv/
+    node_modules/
 site-packages/
-.claude/**
+    
+    // Claude Code local settings
+    .claude/**
 /dist/changelog.md
 /dist/version.txt
 !/test/
@@ -69,3 +79,4 @@ site-packages/
 /dist/
 !/.eslintrc.json
 !/.projenrc.js
+.aider*
